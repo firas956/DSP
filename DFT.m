@@ -14,8 +14,11 @@ w = exp(-1i*2*pi/N);
 W =w.^((0:N-1)'*(0:N-1));
 X = W*x';
 A = 0:N-1;
-plot(A,real(X),'r-');
-hold on;
-plot(A,imag(X),'b-');
+P = (real(X).^2 + imag(X).^2).^0.5;
+plot(A,P,'kx');
+%hold on;
+%plot(A,real(X),'r-');
+%hold on;
+%plot(A,imag(X),'b-');
 
 end
